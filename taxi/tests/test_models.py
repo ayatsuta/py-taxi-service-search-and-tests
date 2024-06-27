@@ -19,7 +19,10 @@ class ManufacturerModelTest(TestCase):
 class CarModelTest(TestCase):
     def test_car_str(self):
         manufacturer = Manufacturer.objects.create(name="Test Manufacturer")
-        car = Car.objects.create(model="Test Model", manufacturer=manufacturer,)
+        car = Car.objects.create(
+            model="Test Model",
+            manufacturer=manufacturer,
+        )
         self.assertEqual(str(car), car.model)
 
 
